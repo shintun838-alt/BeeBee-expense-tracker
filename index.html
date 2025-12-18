@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BeeBee Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<section id="page1" class="page">
+  <div class="card center">
+    <h1>🐝 BeeBee Expense Tracker</h1>
+    <input id="name" placeholder="Your Name">
+    <input id="age" type="number" placeholder="Age">
+    <select id="gender">
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+    <button onclick="createAccount()">Create Account</button>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section id="page2" class="page hidden">
+  <header>
+    <span id="userInfo"></span>
+  </header>
+  <div class="card">
+    <button onclick="go(3)">Today’s Expense</button>
+    <button onclick="go(5)">Main History</button>
+  </div>
+</section>
+
+<!-- PAGE 3 -->
+<section id="page3" class="page hidden">
+  <div class="card">
+    <button class="back" onclick="go(2)">← Back</button>
+    <h2>Add Expense</h2>
+    <input id="type" placeholder="Expense Type">
+    <input id="amount" type="number" placeholder="Amount (MMK)">
+    <button onclick="addExpense()">Add</button>
+    <ul id="list"></ul>
+    <button onclick="go(4)">Today’s History</button>
+  </div>
+</section>
+
+<!-- PAGE 4 -->
+<section id="page4" class="page hidden">
+  <div class="card" id="receipt">
+    <button class="back" onclick="go(2)">← Back</button>
+    <h2>🐝 BeeBee App</h2>
+    <p id="receiptInfo"></p>
+    <ul id="summary"></ul>
+    <h3>Total: <span id="total"></span> MMK</h3>
+    <button onclick="saveDay()">Done</button>
+    <button onclick="printReceipt()">Print Receipt</button>
+    <p class="copyright">© BeeBee Co., Ltd</p>
+  </div>
+</section>
+
+<!-- PAGE 5 -->
+<section id="page5" class="page hidden">
+  <div class="card">
+    <button class="back" onclick="go(2)">← Back</button>
+    <h2>Main History</h2>
+    <div id="history"></div>
+  </div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
+
+
